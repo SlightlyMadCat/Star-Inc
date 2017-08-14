@@ -6,6 +6,7 @@ public class StarsCont : MonoBehaviour {
     public static StarsCont SharedInstance;
     public List<ClonePath> stars = new List<ClonePath>();
     public List<Person> people = new List<Person>();
+    public List<CrowdPart> crowds = new List<CrowdPart>();
 
     private void Awake()
     {
@@ -27,6 +28,14 @@ public class StarsCont : MonoBehaviour {
             for (int i = 0; i < people.Count; i++)
             {
                 people[i].Move();
+            }
+        }
+
+        if(crowds.Count > 0)
+        {
+            for (int i = 0; i < crowds.Count; i++)
+            {
+                crowds[i].Move();
             }
         }
     }

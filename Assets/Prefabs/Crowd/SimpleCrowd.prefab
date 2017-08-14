@@ -2403,6 +2403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   childCount: 0
+  speed: 1
   message: {fileID: 0}
 --- !u!114 &114349270463424948
 MonoBehaviour:

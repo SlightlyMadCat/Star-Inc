@@ -171,14 +171,14 @@ MonoBehaviour:
   drawGizmos: 0
   detailedGizmos: 0
   startEndModifier:
-    addPoints: 1
+    addPoints: 0
     exactStartPoint: 3
     exactEndPoint: 3
-    useRaycasting: 1
+    useRaycasting: 0
     mask:
       serializedVersion: 2
-      m_Bits: 256
-    useGraphRaycasting: 1
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
   traversableTags: -1
   traversableTagsCompatibility:
     tagsChange: -1
