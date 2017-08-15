@@ -14,6 +14,8 @@ public class DemoControl : MonoBehaviour
     public GameObject LightsGroup;
 	public Toggle Fog;
 
+    public Color ambient;
+
 	void Awake ()
 	{
 	    switch ((int)MobileShadow.TextureSize)
@@ -64,7 +66,8 @@ public class DemoControl : MonoBehaviour
                 LightsGroup.SetActive(false);
                 break;
             case 1://sunset
-                RenderSettings.ambientLight = new Color(0.477f, 0.326f, 0.304f);
+                //RenderSettings.ambientLight = new Color(0.477f, 0.326f, 0.304f);
+                RenderSettings.ambientLight = ambient;
 	            RenderSettings.fogColor = RenderSettings.ambientLight;
                 //MobileShadow.SunLight.color = new Color32(217, 160, 154, 255);
                 MobileShadow.SunLight.color = Color.white;
