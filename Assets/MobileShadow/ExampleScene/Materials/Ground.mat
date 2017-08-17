@@ -48,11 +48,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _FourthTex:
-        m_Texture: {fileID: 2800000, guid: d93bb84854dc3d14b95a73993d076c54, type: 3}
+        m_Texture: {fileID: 2800000, guid: 51d4f0591348f401ebdabcebee24a7e4, type: 3}
         m_Scale: {x: 0.1, y: 0.1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 58f9d01af317da745af43c0fe8a77c5c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 51d4f0591348f401ebdabcebee24a7e4, type: 3}
         m_Scale: {x: 0.1, y: 0.1}
         m_Offset: {x: 0, y: 0}
     - _Mask:
@@ -64,7 +64,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MixTex:
-        m_Texture: {fileID: 2800000, guid: c69c6ec392d457f4e85babdfb54934ca, type: 3}
+        m_Texture: {fileID: 2800000, guid: db2ee54bea070453a82a99da9b7c0898, type: 3}
         m_Scale: {x: 0.05, y: 0.05}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -76,15 +76,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SecondTex:
-        m_Texture: {fileID: 2800000, guid: 58f9d01af317da745af43c0fe8a77c5c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 317b71bf6078945ada273ba37a9cb38b, type: 3}
         m_Scale: {x: 0.1, y: 0.1}
         m_Offset: {x: 0, y: 0}
     - _ThirdTex:
-        m_Texture: {fileID: 2800000, guid: 955c46c977d493a478fdffcd916b16ce, type: 3}
+        m_Texture: {fileID: 2800000, guid: bd34874ea39dc4e8eb682f14b466e512, type: 3}
         m_Scale: {x: 0.1, y: 0.1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _BlendFactor: 0.75
+    - _BlendFactor: 0.609
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1

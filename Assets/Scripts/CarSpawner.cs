@@ -48,7 +48,7 @@ public class CarSpawner : MonoBehaviour {
             } else if (_i == 3)//-вертолет
             {
                 helSpawner.helicopters.Add(busStation.carPrefabs[_i]);
-            } else if (_i == 4)//-самолет
+            } else if (_i == 4 || _i == 5)//-самолет
             {
                 planeSpawner.plainPrefs.Add(busStation.carPrefabs[_i]);
             }
@@ -73,7 +73,7 @@ public class CarSpawner : MonoBehaviour {
         else
             busStation.stationPrefabs[1].SetActive(false);
 
-        if (carPrefIndexes.Contains(4))            // если куплен самолет
+        if (carPrefIndexes.Contains(4) || carPrefIndexes.Contains(5))            // если куплен самолет
             busStation.stationPrefabs[2].SetActive(true);
         else
             busStation.stationPrefabs[2].SetActive(false);

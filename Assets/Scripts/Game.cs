@@ -20,6 +20,7 @@ public class Game               //КЛАСС ДЛЯ ВСЕХ СОХРАНЕНИ�
     public int droneTakesDown = 0;          //сколько дронов сбито
     public int extraPersecFound = 0;            //сколько экстра персов найдено
     public double totalMoneyOnAllLevels = 0;    //деньги за все уровни
+    public int currentMissionNum = 0;           //номер текущей миссии
 
     //RENDERING QUALITY
     public bool fog = true;                    //on off fog

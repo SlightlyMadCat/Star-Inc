@@ -50,7 +50,7 @@ public class UIManager : MonoBehaviour {
     // 11 - capacity notif
     // 12 - buy bus screen
     // 13 - afk notif
-    // 14 - extra pers bonus
+    // 14 - extra pers bonus    //mission complete
     // 15 - veh capacity notif
     // 16 - stats screen
     // 17 - prestige screen

@@ -44,6 +44,7 @@ public class SaveManager : MonoBehaviour {
     public LevelManager lvlManager;
     public GameSparksManager gsManager;
     public DemoControl demoControl;
+    public Missions missions;
 
     //для статки
     public int dronesTakeDown = 0;
@@ -160,7 +161,8 @@ public class SaveManager : MonoBehaviour {
         gameSave.carIndexes = new List<int>();
 
         if (dataReset == false)
-        {         
+        {
+            gameSave.currentMissionNum = missions.mission_number;
 //////////////////////////////////////////////
             gameSave.totalInGameMinutes = SessionTime();
 //////////////////////////////////////////////
@@ -199,6 +201,7 @@ public class SaveManager : MonoBehaviour {
             gameSave.startDailyGiftTime = economics.startDailyGiftTime;
         } else
         {
+            gameSave.currentMissionNum = 0;
             //////////////////////////////////////////////
             gameSave.totalInGameMinutes = SessionTime();
             //////////////////////////////////////////////
@@ -263,6 +266,9 @@ public class SaveManager : MonoBehaviour {
     {
         lvlManager.SetupLevel(gameLoad.curLevel);
         gsManager.minutes = gameLoad.totalInGameMinutes;
+        missions.mission_number = gameLoad.currentMissionNum;
+        missions.Setup();
+
         //print("total + "+ gameLoad.totalInGameMinutes);
 
         languageDrop.value = gameLoad.languageInt;
@@ -347,11 +353,15 @@ public class SaveManager : MonoBehaviour {
             //debug.text = "Save is loaded";
         } else
         {
+            missions.mission_number = 0;
+            missions.Setup();
+
             List<int> defaultIndex = new List<int>() { -1, -1, -1, 0 };
             int i = 0;
             for (i = 0; i < hostels.Length; i++)
             {
                 hostels[i].GetComponent<StarHostel>().SetHostelPrefab(defaultIndex[i]);        //номер префаба здания
+                hostels[i].GetComponent<StarHostel>().UpdHostelScaleCapacity();
                 //i++;
             }
 
@@ -370,6 +380,9 @@ public class SaveManager : MonoBehaviour {
             recStdio.UpdSilosCount(0);
             recStdio.getSaveData(gameLoad.exitTime);
             SetupTimeSet();
+
+            cloneCenter.capacityPanel = UIManager.SharedInstance.timeSpawnPanel;
+            cloneCenter.UpdUIClonesNum();
             //debug.text = "data not ";
         }
 

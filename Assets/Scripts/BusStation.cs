@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class BusStation : MonoBehaviour {
     public Scrollbar scrollBar;
     public GameObject[] carPrefabs;
-    public GameObject[] stationPrefabs;
+    public GameObject[] stationPrefabs;     //-- меняются в car spawner
 
     public static BusStation SharedInstance;
 
