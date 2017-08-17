@@ -2102,7 +2102,7 @@ MonoBehaviour:
   playAutomatically: 1
   resetOnEnable: 1
   eventReciever: {fileID: 0}
-  FPS: 20
+  FPS: 30
   skipLastLoopFrame: 0
   recalculateCrossfadeNormals: 0
   meshFilter: {fileID: 33433486777665932}
@@ -2130,7 +2130,7 @@ MonoBehaviour:
   playAutomatically: 1
   resetOnEnable: 1
   eventReciever: {fileID: 0}
-  FPS: 20
+  FPS: 30
   skipLastLoopFrame: 0
   recalculateCrossfadeNormals: 0
   meshFilter: {fileID: 33155992588348892}
@@ -2190,7 +2190,7 @@ MonoBehaviour:
   playAutomatically: 1
   resetOnEnable: 1
   eventReciever: {fileID: 0}
-  FPS: 20
+  FPS: 30
   skipLastLoopFrame: 0
   recalculateCrossfadeNormals: 0
   meshFilter: {fileID: 33435900144229552}
@@ -2218,7 +2218,7 @@ MonoBehaviour:
   playAutomatically: 1
   resetOnEnable: 1
   eventReciever: {fileID: 0}
-  FPS: 20
+  FPS: 30
   skipLastLoopFrame: 0
   recalculateCrossfadeNormals: 0
   meshFilter: {fileID: 33026963964850450}
@@ -2278,7 +2278,7 @@ MonoBehaviour:
   playAutomatically: 1
   resetOnEnable: 1
   eventReciever: {fileID: 0}
-  FPS: 20
+  FPS: 30
   skipLastLoopFrame: 0
   recalculateCrossfadeNormals: 0
   meshFilter: {fileID: 33343216007038124}
@@ -2306,7 +2306,7 @@ MonoBehaviour:
   playAutomatically: 1
   resetOnEnable: 1
   eventReciever: {fileID: 0}
-  FPS: 20
+  FPS: 30
   skipLastLoopFrame: 0
   recalculateCrossfadeNormals: 0
   meshFilter: {fileID: 33782284235666742}
@@ -2350,7 +2350,7 @@ MonoBehaviour:
   playAutomatically: 1
   resetOnEnable: 1
   eventReciever: {fileID: 0}
-  FPS: 20
+  FPS: 30
   skipLastLoopFrame: 0
   recalculateCrossfadeNormals: 0
   meshFilter: {fileID: 33929967509164902}
@@ -2457,7 +2457,7 @@ MonoBehaviour:
   playAutomatically: 1
   resetOnEnable: 1
   eventReciever: {fileID: 0}
-  FPS: 20
+  FPS: 30
   skipLastLoopFrame: 0
   recalculateCrossfadeNormals: 0
   meshFilter: {fileID: 33129672856130554}
@@ -2485,7 +2485,7 @@ MonoBehaviour:
   playAutomatically: 1
   resetOnEnable: 1
   eventReciever: {fileID: 0}
-  FPS: 20
+  FPS: 30
   skipLastLoopFrame: 0
   recalculateCrossfadeNormals: 0
   meshFilter: {fileID: 33894820858191804}
@@ -2513,7 +2513,7 @@ MonoBehaviour:
   playAutomatically: 1
   resetOnEnable: 1
   eventReciever: {fileID: 0}
-  FPS: 20
+  FPS: 30
   skipLastLoopFrame: 0
   recalculateCrossfadeNormals: 0
   meshFilter: {fileID: 33669431307132322}
@@ -2541,7 +2541,7 @@ MonoBehaviour:
   playAutomatically: 1
   resetOnEnable: 1
   eventReciever: {fileID: 0}
-  FPS: 20
+  FPS: 30
   skipLastLoopFrame: 0
   recalculateCrossfadeNormals: 0
   meshFilter: {fileID: 33398975567253420}
@@ -2585,7 +2585,7 @@ MonoBehaviour:
   playAutomatically: 1
   resetOnEnable: 1
   eventReciever: {fileID: 0}
-  FPS: 20
+  FPS: 30
   skipLastLoopFrame: 0
   recalculateCrossfadeNormals: 0
   meshFilter: {fileID: 33472183917265732}
@@ -2613,7 +2613,7 @@ MonoBehaviour:
   playAutomatically: 1
   resetOnEnable: 1
   eventReciever: {fileID: 0}
-  FPS: 20
+  FPS: 30
   skipLastLoopFrame: 0
   recalculateCrossfadeNormals: 0
   meshFilter: {fileID: 33992567700868540}
@@ -2641,7 +2641,7 @@ MonoBehaviour:
   playAutomatically: 1
   resetOnEnable: 1
   eventReciever: {fileID: 0}
-  FPS: 20
+  FPS: 30
   skipLastLoopFrame: 0
   recalculateCrossfadeNormals: 0
   meshFilter: {fileID: 33022636122944902}
@@ -2717,7 +2717,7 @@ MonoBehaviour:
   playAutomatically: 1
   resetOnEnable: 1
   eventReciever: {fileID: 0}
-  FPS: 20
+  FPS: 30
   skipLastLoopFrame: 0
   recalculateCrossfadeNormals: 0
   meshFilter: {fileID: 33814385027106616}
@@ -2745,7 +2745,7 @@ MonoBehaviour:
   playAutomatically: 1
   resetOnEnable: 1
   eventReciever: {fileID: 0}
-  FPS: 20
+  FPS: 30
   skipLastLoopFrame: 0
   recalculateCrossfadeNormals: 0
   meshFilter: {fileID: 33120961024624078}
@@ -2789,7 +2789,7 @@ MonoBehaviour:
   playAutomatically: 1
   resetOnEnable: 1
   eventReciever: {fileID: 0}
-  FPS: 20
+  FPS: 30
   skipLastLoopFrame: 0
   recalculateCrossfadeNormals: 0
   meshFilter: {fileID: 33173559608362832}
@@ -2833,7 +2833,7 @@ MonoBehaviour:
   playAutomatically: 1
   resetOnEnable: 1
   eventReciever: {fileID: 0}
-  FPS: 20
+  FPS: 30
   skipLastLoopFrame: 0
   recalculateCrossfadeNormals: 0
   meshFilter: {fileID: 33589852019555700}
@@ -2925,7 +2925,7 @@ MonoBehaviour:
   playAutomatically: 1
   resetOnEnable: 1
   eventReciever: {fileID: 0}
-  FPS: 20
+  FPS: 30
   skipLastLoopFrame: 0
   recalculateCrossfadeNormals: 0
   meshFilter: {fileID: 33863881854475646}
@@ -2953,7 +2953,7 @@ MonoBehaviour:
   playAutomatically: 1
   resetOnEnable: 1
   eventReciever: {fileID: 0}
-  FPS: 20
+  FPS: 30
   skipLastLoopFrame: 0
   recalculateCrossfadeNormals: 0
   meshFilter: {fileID: 33542516790422582}
@@ -2981,7 +2981,7 @@ MonoBehaviour:
   playAutomatically: 1
   resetOnEnable: 1
   eventReciever: {fileID: 0}
-  FPS: 20
+  FPS: 30
   skipLastLoopFrame: 0
   recalculateCrossfadeNormals: 0
   meshFilter: {fileID: 33243473987320722}

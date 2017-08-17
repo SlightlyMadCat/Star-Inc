@@ -349,7 +349,7 @@ public class UIManager : MonoBehaviour {
         }
     }
 
-    /*void OnGUI()            //СЧЕТЧИК ФПС
+    void OnGUI()            //СЧЕТЧИК ФПС
     {
         int w = Screen.width, h = Screen.height;
 
@@ -363,7 +363,7 @@ public class UIManager : MonoBehaviour {
         fps = 1.0f / deltaTime;
         string text = string.Format("{0:0.0} ms ({1:0.} fps)", msec, fps);
         GUI.Label(rect, text, style);
-    }*/
+    }
     
     /*public void CheckFps()
     {
