@@ -59,10 +59,8 @@ public class CarSpawner : MonoBehaviour {
 
         ChoseActiveBuildings();
 
-        print(working);
         if (!working)
         {
-            print("start cor");
             StartCoroutine(WaitAndPrint());
         }
     }
@@ -135,7 +133,6 @@ public class CarSpawner : MonoBehaviour {
 
     void SpawnCar()          //спаун caar на улице
     {
-        print("spawn");
         if (!isTrackSpawn)
         {
             if (!canSpawn)

@@ -67,7 +67,7 @@ public class TouchRecognize : MonoBehaviour {
                             }
                         }
 
-                        if (dist < 35)
+                        if (dist < 45)
                             BuildingRecognize(_touch);
                     }
                 }

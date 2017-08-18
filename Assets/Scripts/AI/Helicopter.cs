@@ -20,20 +20,20 @@ public class Helicopter : MonoBehaviour {
         //print(target.transform.position);
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (!startMove)
             return;
 
         if (target.position.y < transform.position.y && moveBottom)
         {
-            transform.Translate(Vector3.up * -0.1f);
+            transform.Translate(Vector3.up * -Time.deltaTime * 3);
             //print("fff");
             return;
         }
         else if (target.position.y + 25 > transform.position.y && !moveBottom)
         {
-            transform.Translate(Vector3.up * 0.1f);
+            transform.Translate(Vector3.up * Time.deltaTime * 3);
             return;
         }
 

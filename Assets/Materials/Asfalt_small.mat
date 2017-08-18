@@ -43,7 +43,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmitTex:
-        m_Texture: {fileID: 2800000, guid: 58f9d01af317da745af43c0fe8a77c5c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 955c46c977d493a478fdffcd916b16ce, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _FourthTex:
@@ -85,7 +85,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _Dissolve: 0.45
     - _DstBlend: 0
-    - _EmitValue: 0.135
+    - _EmitValue: 0.096
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
