@@ -75,9 +75,14 @@ public class StarHostel : MonoBehaviour {
     {
         if (visible)
         {
-            float k = (currentCapacity * 1f) / (hostelCapacity * 1f);
-            thisHostelCapacityScale.fillAmount = k;
-            thisHostelCapacityScale.color = Color.Lerp(Color.green, Color.red, k);
+            ImmidUpd();
         }
+    }
+
+    public void ImmidUpd()
+    {
+        float k = (currentCapacity * 1f) / (hostelCapacity * 1f);
+        thisHostelCapacityScale.fillAmount = k;
+        thisHostelCapacityScale.color = Color.Lerp(Color.green, Color.red, k);
     }
 }

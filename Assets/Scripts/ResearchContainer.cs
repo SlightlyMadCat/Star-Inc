@@ -16,6 +16,8 @@ public class ResearchContainer : MonoBehaviour {
     public Image[] progressBars;
     public Sprite doneImage;
 
+    public GameObject[] containers;
+
     public bool visible = false;
 
     private void Awake()

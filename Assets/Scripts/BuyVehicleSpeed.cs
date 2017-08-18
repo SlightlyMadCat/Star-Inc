@@ -111,6 +111,11 @@ public class BuyVehicleSpeed : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        CheckBtn();
+    }
+
     public void SendDataToCont()    //посылаю данные в конт
     {
         parent.SetNewCar(slotParentIdex, currentVehicleIndex);

@@ -278,7 +278,7 @@ public class SaveManager : MonoBehaviour {
         {
             hostels[i].GetComponent<StarHostel>().SetHostelPrefab(gameLoad.hostelIndex[i]);        //номер префаба здания
             hostels[i].GetComponent<StarHostel>().currentCapacity = gameLoad.clonesInHostel[i];        //апд кол-во мобов в здании
-            hostels[i].GetComponent<StarHostel>().UpdHostelScaleCapacity();            //апд полоса мобов
+            hostels[i].GetComponent<StarHostel>().ImmidUpd();           //апд полоса мобов
 
             cloneCenter.clonesNum += gameLoad.clonesInHostel[i];
         }

@@ -25,6 +25,7 @@ public class CarSpawner : MonoBehaviour {
     public PlaneSpawner planeSpawner;
 
     public bool canSpawn = true;
+    bool working = false;
 
     /*private void Start()
     {
@@ -45,7 +46,7 @@ public class CarSpawner : MonoBehaviour {
             if (_i >= 0 && _i <3)
             {
                 carList.Add(busStation.carPrefabs[_i]);
-            } else if (_i == 3)//-вертолет
+            } else if (_i == 3 || _i == 6)//-вертолет - дирижабль
             {
                 helSpawner.helicopters.Add(busStation.carPrefabs[_i]);
             } else if (_i == 4 || _i == 5)//-самолет
@@ -57,7 +58,13 @@ public class CarSpawner : MonoBehaviour {
         }
 
         ChoseActiveBuildings();
-        StartCoroutine(WaitAndPrint());
+
+        print(working);
+        if (!working)
+        {
+            print("start cor");
+            StartCoroutine(WaitAndPrint());
+        }
     }
 
     void ChoseActiveBuildings()     //ккаие здания включить
@@ -68,7 +75,7 @@ public class CarSpawner : MonoBehaviour {
         else
             busStation.stationPrefabs[0].SetActive(false);*/
 
-        if (carPrefIndexes.Contains(3))            // если куплен вертолет
+        if (carPrefIndexes.Contains(3) || carPrefIndexes.Contains(6))            // если куплен вертолет или дирижабль
             busStation.stationPrefabs[1].SetActive(true);
         else
             busStation.stationPrefabs[1].SetActive(false);
@@ -104,6 +111,7 @@ public class CarSpawner : MonoBehaviour {
     {
         while (true)
         {
+            working = true;
             if (carList.Count > 0)
                 SpawnCar();
             //currentCd = 0;
@@ -125,8 +133,9 @@ public class CarSpawner : MonoBehaviour {
             StartCoroutine(WaitAndPrint());
     }
 
-    void SpawnCar()          //спаун человека на улице
+    void SpawnCar()          //спаун caar на улице
     {
+        print("spawn");
         if (!isTrackSpawn)
         {
             if (!canSpawn)

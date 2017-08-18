@@ -38,61 +38,8 @@ public class TouchRecognize : MonoBehaviour {
                                 hitInfo.transform.GetComponent<CrowdTouch>().SpawnCloneInParent();
                             }
                         }
-
-                        /*if (Input.touches[i].phase == TouchPhase.Began && tapPos.Contains(Input.GetTouch(i).position) == false)
-                        {
-                            RaycastHit hitInfo;
-                            bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.GetTouch(i).position), out hitInfo, Mathf.Infinity);
-
-                            if (hitInfo.transform.tag == "Crowd_0")
-                            {
-                                tapPos.Add(Input.GetTouch(i).position);
-                            }
-                        }*/
-
-                        /*if (Input.touches[i].phase == TouchPhase.Stationary)
-                        {
-                            RaycastHit hitInfo;
-                            bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.GetTouch(i).position), out hitInfo, Mathf.Infinity);
-
-                            if (EventSystem.current.IsPointerOverGameObject(Input.GetTouch(i).fingerId))            //ui block
-                                return;
-
-                            if (hitInfo.transform.tag == "TapField")
-                            {
-                                numTaps += addClonePerSec;
-                            }
-                        }*/
-
-                        /*if (Input.touches[i].phase == TouchPhase.Ended)
-                        {
-                            if (tapPos.Contains(Input.GetTouch(i).position))
-                            {
-                                if (EventSystem.current.IsPointerOverGameObject(Input.GetTouch(i).fingerId))            //ui block
-                                {
-                                    return;
-                                }
-                                else
-                                {
-                                    RaycastHit hitInfo;
-                                    bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.GetTouch(i).position), out hitInfo, Mathf.Infinity);
-
-                                    //print(hitInfo.transform.name);
-
-                                    //marker.transform.position = hitInfo.point;
-                                    //cloneCenter.AttractPeople(1, hitInfo.point, hitInfo.transform.gameObject);
-                                    tapPos.Remove(Input.GetTouch(i).position);
-                                    //numTaps++;
-                                }
-                            }
-                        }*/
                     }
 
-                    /*if(numTaps >= 1)
-                    {
-                        cloneCenter.AttractPeople(numTaps);
-                        numTaps = 0;
-                    }*/
 
             //РАСПОЗНОВАНИЕ НАЖАТИЙ НА ЗДАНИЯ
 
@@ -146,24 +93,35 @@ public class TouchRecognize : MonoBehaviour {
                 // ui touched
             }
 
-            if (hitInfo.transform.tag == "Hostel" && hitInfo.transform.GetComponent<StarHostel>().isBuilded)
+            switch (hitInfo.transform.tag)
             {
-                uiManager.ShowHostelsBtn();         //запуск панели ui
+                case "Hostel":
+                    if (hitInfo.transform.GetComponent<StarHostel>().isBuilded) {
+                        uiManager.ShowHostelsBtn();
+                    }
+                    break;
+                case "BusStation":
+                    uiManager.ShowBusStationMenu(1);
+                    break;
             }
 
-            if (hitInfo.transform.tag == "BusStation")         //запуск панели станции
+            switch (hitInfo.transform.name)
             {
-                uiManager.ShowBusStationMenu(1);
-            }
-
-            if (hitInfo.transform.name == "ResearchLab")            //окно исследований
-            {
-                uiManager.ShowResearch(1);
-            }
-
-            if (hitInfo.transform.name == "RecordingStudio")            //студия звукозаписи
-            {
-                uiManager.ShowRecordingScreen(1);
+                case "Surgery":
+                    SwitchResScreen(0);
+                    break;
+                case "Barber":
+                    SwitchResScreen(2);
+                    break;
+                case "Cosmetics":
+                    SwitchResScreen(3);
+                    break;
+                case "GYM":
+                    SwitchResScreen(1);
+                    break;
+                case "RecordingStudio":
+                    uiManager.ShowRecordingScreen(1);
+                    break;
             }
         }
 
@@ -177,5 +135,19 @@ public class TouchRecognize : MonoBehaviour {
         List<RaycastResult> results = new List<RaycastResult>();
         EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
         return results.Count > 0;
+    }
+
+    void SwitchResScreen(int i)     //выбираю, какой из экранов исследований показать
+    {
+        for (int j = 0; j < ResearchContainer.SharedInstance.containers.Length; j++)
+        {
+            if (i != j)
+                ResearchContainer.SharedInstance.containers[j].SetActive(false);
+            else
+                ResearchContainer.SharedInstance.containers[j].SetActive(true);
+        }
+
+        uiManager.ShowResearch(1);
+        ResearchContainer.SharedInstance.scroll.value = 1;
     }
 }

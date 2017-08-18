@@ -260,7 +260,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 734bea15d148d9449847edd952330efa, type: 3}
+  m_Sprite: {fileID: 21300038, guid: c0f7690a0742a894cae19af7bdb06270, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -359,7 +359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameResearch: {fileID: 114313664856234738}
   progressBar: {fileID: 114199547394882346}
-  startPrice: 1
+  startPrice: 10
   maxValue: 10
   currentValue: 0
   valueToOpen: 0
