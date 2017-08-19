@@ -21,10 +21,10 @@ public class PeopleSpawner : MonoBehaviour {
     {
         currentCd = Cd;
         StartCoroutine(SpawnMessage());
-        StartCoroutine(WaitAndPrint());
+        //StartCoroutine(WaitAndPrint());
     }
 
-    /*private void FixedUpdate()
+    private void FixedUpdate()
     {
         if (currentCd < randomCd)
         {
@@ -36,11 +36,11 @@ public class PeopleSpawner : MonoBehaviour {
             currentCd = 0;
             randomCd = Random.Range(Cd/5,Cd);
         }
-    }*/
+    }
 
     //private int timer = 0;
 
-    IEnumerator WaitAndPrint()
+    /*IEnumerator WaitAndPrint()
     {
         while (true)
         {
@@ -49,7 +49,7 @@ public class PeopleSpawner : MonoBehaviour {
 
             yield return null;
         }
-    }
+    }*/
 
     public void StartCor()
     {

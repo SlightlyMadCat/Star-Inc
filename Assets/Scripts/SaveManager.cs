@@ -162,7 +162,6 @@ public class SaveManager : MonoBehaviour {
 
         if (dataReset == false)
         {
-            gameSave.currentMissionNum = missions.mission_number;
 //////////////////////////////////////////////
             gameSave.totalInGameMinutes = SessionTime();
 //////////////////////////////////////////////
@@ -201,7 +200,7 @@ public class SaveManager : MonoBehaviour {
             gameSave.startDailyGiftTime = economics.startDailyGiftTime;
         } else
         {
-            gameSave.currentMissionNum = 0;
+            //gameSave.currentMissionNum = 0;
             //////////////////////////////////////////////
             gameSave.totalInGameMinutes = SessionTime();
             //////////////////////////////////////////////
@@ -260,18 +259,19 @@ public class SaveManager : MonoBehaviour {
         gameSave.shadowOpacity = opacitySlider.value;
 
         gameSave.silosCount = recStdio.silosCount;      //купленные за бабки вышки афк
+        gameSave.currentMissionNum = missions.mission_number;
     }
 
     void SendReadHostelIndex()          //читаю данные хостелов         и все данные
     {
-        lvlManager.SetupLevel(gameLoad.curLevel);
+        /*lvlManager.SetupLevel(gameLoad.curLevel);
         gsManager.minutes = gameLoad.totalInGameMinutes;
         missions.mission_number = gameLoad.currentMissionNum;
         missions.Setup();
 
         //print("total + "+ gameLoad.totalInGameMinutes);
 
-        languageDrop.value = gameLoad.languageInt;
+        languageDrop.value = gameLoad.languageInt;*/
 
         int i = 0;
         for(i = 0; i < hostels.Length; i++)
@@ -285,6 +285,14 @@ public class SaveManager : MonoBehaviour {
 
         cloneCenter.clonesSpawned = cloneCenter.clonesNum;
 
+        lvlManager.SetupLevel(gameLoad.curLevel);
+        gsManager.minutes = gameLoad.totalInGameMinutes;
+        missions.mission_number = gameLoad.currentMissionNum;
+        missions.Setup();
+
+        //print("total + "+ gameLoad.totalInGameMinutes);
+
+        languageDrop.value = gameLoad.languageInt;
 
         cloneCenter.capacityPanel = UIManager.SharedInstance.timeSpawnPanel;
         cloneCenter.UpdUIClonesNum();

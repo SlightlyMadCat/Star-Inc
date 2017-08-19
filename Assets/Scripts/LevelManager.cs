@@ -121,12 +121,12 @@ public class LevelManager : MonoBehaviour {
         else if (currentLevel == swipeLvl)
         {
             buyBtn.GetComponentInChildren<Text>().text = "Current level";
-            //buyBtn.interactable = false;
+            buyBtn.interactable = false;
         }
         else
         {
             buyBtn.GetComponentInChildren<Text>().text = "Previous level";
-            //buyBtn.interactable = false;
+            buyBtn.interactable = false;
         }
 
 
@@ -150,8 +150,8 @@ public class LevelManager : MonoBehaviour {
 
         if (economics.totalMoney >= _price && currentLevel < swipeLvl)             //TODO добавить сюда не счетчек денег, а счетчик изученного и купленного
             buyBtn.interactable = true;
-        //else
-        //    buyBtn.interactable = false;
+        else
+            buyBtn.interactable = false;
 
         if (currentLevel < swipeLvl)
         {

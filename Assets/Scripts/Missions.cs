@@ -15,14 +15,13 @@ public class Missions : MonoBehaviour {
 
     double target_value = 0;
 
-    public int mission_number = -1;
+    public int mission_number = 0;
 
     public MissionConstructor[] missions;
     MissionConstructor curMission;
 
     public void Setup()
     {
-        print(mission_number);
         curMission = missions[mission_number];
 
         mission_name.text = curMission.name;
@@ -34,7 +33,7 @@ public class Missions : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        if (mission_number == -1)
+        if (mission_number == -1 || mission_number > missions.Length)
             return;
 
         char lastSymbol = curMission.target[curMission.target.Length-1];
@@ -72,7 +71,6 @@ public class Missions : MonoBehaviour {
 
     public void HideAndChangeNum()
     {
-        print("hide");
         UIManager.SharedInstance.ShowExtraPersScreen(2);
         mission_number++;
         Setup();
@@ -82,5 +80,21 @@ public class Missions : MonoBehaviour {
     {
         UIManager.SharedInstance.ShowExtraPersScreen(1);
         notification.SetActive(false);
+        SendPrize();
+    }
+
+    void SendPrize()
+    {
+        char lastSymbol = curMission.prize[curMission.prize.Length - 1];
+
+        switch (lastSymbol)
+        {
+            case 'd':
+                Economics.SharedInstance.ImmidUpd(double.Parse(curMission.prize.Substring(0, curMission.prize.Length - 1)));
+                break;
+            case 'g':
+                Economics.SharedInstance.GoldenEggUpd(int.Parse(curMission.prize.Substring(0, curMission.prize.Length - 1)));
+                break;
+        }
     }
 }
