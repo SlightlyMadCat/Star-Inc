@@ -54,7 +54,7 @@ Transform:
   m_GameObject: {fileID: 1419063260470618}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10.22, y: 1.43, z: 13.06}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 4714965772134822}
   m_Father: {fileID: 0}
@@ -132,7 +132,7 @@ MonoBehaviour:
   playAutomatically: 1
   resetOnEnable: 1
   eventReciever: {fileID: 0}
-  FPS: 30
+  FPS: 10
   skipLastLoopFrame: 0
   recalculateCrossfadeNormals: 0
   meshFilter: {fileID: 33332908075392698}

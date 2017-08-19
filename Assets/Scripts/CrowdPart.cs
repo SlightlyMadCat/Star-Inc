@@ -17,7 +17,7 @@ public class CrowdPart : MonoBehaviour {
 
         for (int i = 0; i < childCount; i++)
         {
-            transform.GetChild(i).transform.position = transform.TransformPoint(new Vector3(Random.Range(0,10), 0, Random.Range(0, 10)) * 0.3f);
+            transform.GetChild(i).transform.position = transform.TransformPoint(new Vector3(Random.Range(0,10), 0, Random.Range(0, 10)) * 0.2f);
             transform.GetChild(i).gameObject.SetActive(true);
 
             if (transform.GetChild(i).GetComponent<MeshAnimator>())         //изменяю скорость чтобы толпа была более не однородной
